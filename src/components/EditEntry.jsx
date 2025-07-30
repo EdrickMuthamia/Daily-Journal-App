@@ -11,7 +11,7 @@ function EditJournal() {
 
   // GET - Load existing data
   useEffect(() => {
-    fetch(`http://localhost:3000/entries/${id}`)
+    fetch(`http://localhost:3001/entries/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setTitle(data.title);
