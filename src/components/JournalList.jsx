@@ -37,7 +37,7 @@ function JournalList() {
           <p>Date: {entry.date}</p>
           <p>Mood: {entry.mood}</p>
           <p>{entry.content}</p>
-          <button onClick={() => window.location.href = `/edit/${entry.id}`} className="btn">Edit</button>
+          <button onClick={() => window.location = `/edit/${entry.id}`} className="btn">Edit</button>
           <button onClick={() => handleDelete(entry.id)} className="btn">Delete</button>
         </div>
       ))}
