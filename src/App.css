@@ -27,10 +27,14 @@
 /* Home */
 .home {
   text-align: center;
+  height: auto;
   color: white;
   padding: 2rem;
+  align-items: center;
+  border: #e2dddd 1px solid;
+  border-radius: 10px;
+  background: linear-gradient(to right , #667eea, #764ba2);
 }
-
 /* Button */
 .btn {
   background: #667eea;
