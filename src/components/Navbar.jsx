@@ -1,13 +1,11 @@
-import { Link } from 'react-router-dom';
-
 function Navbar() {
   return (
     <nav className="navbar">
-      <h2><Link to="/">Daily Journal</Link></h2>
+      <h2><button onClick={() => window.location.href = '/'}>Daily Journal</button></h2>
       <div>
-        <Link to="/">Home</Link>
-        <Link to="/entries">Entries</Link>
-        <Link to="/add">Add Entry</Link>
+        <button onClick={() => window.location.href = '/'}>Home</button>
+        <button onClick={() => window.location.href = '/entries'}>Entries</button>
+        <button onClick={() => window.location.href = '/add'}>Add Entry</button>
       </div>
     </nav>
   );
