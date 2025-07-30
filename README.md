@@ -1,12 +1,55 @@
-# React + Vite
+# Daily Journal App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based journal application where users can write, edit, and manage their daily entries.
 
-Currently, two official plugins are available:
+## Features I Built
+- **Add Entries**: Create new journal entries with title, content, date, and mood
+- **View All Entries**: Display all journal entries in a clean list format
+- **Edit Entries**: Update existing entries with new information
+- **Delete Entries**: Remove entries with confirmation dialog
+- **Navigation**: Easy navigation between different pages
+- **Responsive Design**: Works on different screen sizes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technical Implementation
 
-## Expanding the ESLint configuration
+### Frontend (React)
+- **Components**: Built 6 reusable React components
+- **Routing**: Implemented React Router for page navigation
+- **State Management**: Used React hooks (useState, useEffect)
+- **Forms**: Created controlled forms for data input
+- **API Integration**: Connected frontend to backend with fetch requests
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend (Firebase)
+- **Database**: Firebase Firestore cloud database
+- **Real-time**: Cloud-based NoSQL database
+- **CRUD Operations**: Create, Read, Update, Delete with Firebase SDK
+
+### Components I Created
+1. `Navbar.jsx` - Navigation menu
+2. `Home.jsx` - Welcome page
+3. `JournalList.jsx` - Display all entries
+4. `AddJournal.jsx` - Form to add new entries
+5. `EditEntry.jsx` - Form to edit existing entries
+6. `NotFound.jsx` - 404 error page
+
+## How to Run
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Setup Firebase (see FIREBASE_SETUP.md for details):
+   - Create Firebase project
+   - Setup Firestore database
+   - Update firebase.js with your config
+
+3. Start the React app:
+   ```bash
+   npm run dev
+   ```
+
+4. Open browser: `http://localhost:5173`
+
+# license  
+MIT
