@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 function JournalList() {
   const [entries, setEntries] = useState([]);
@@ -7,9 +6,9 @@ function JournalList() {
   // Load my journal entries when page opens
   useEffect(() => {
     // get all entries from my database
-    fetch('http://localhost:3000/entries')
-      .then(response => response.json())
-      .then(data => {
+    fetch("http://localhost:3001/entries")
+      .then((response) => response.json())
+      .then((data) => {
         setEntries(data);
       });
   }, []);
@@ -17,12 +16,11 @@ function JournalList() {
   // Function to delete an entry
   const handleDelete = (entryId) => {
     if (confirm('Are you sure you want to delete this?')) {
-      fetch(`http://localhost:3000/entries/${entryId}`, {
-        method: 'DELETE'
-      })
-      .then(() => {
+      fetch(`http://localhost:3001/entries/${entryId}`, {
+        method: "DELETE",
+      }).then(() => {
         // remove from the list after deleting
-        const updatedEntries = entries.filter(entry => entry.id !== entryId);
+        const updatedEntries = entries.filter((entry) => entry.id !== entryId);
         setEntries(updatedEntries);
       });
     }
@@ -39,7 +37,7 @@ function JournalList() {
           <p>Date: {entry.date}</p>
           <p>Mood: {entry.mood}</p>
           <p>{entry.content}</p>
-          <Link to={`/edit/${entry.id}`} className="btn">Edit</Link>
+          <button onClick={() => window.location.href = `/edit/${entry.id}`} className="btn">Edit</button>
           <button onClick={() => handleDelete(entry.id)} className="btn">Delete</button>
         </div>
       ))}
