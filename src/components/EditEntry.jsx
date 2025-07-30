@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-function EditEntry() {
+function EditJournal() {
   const { id } = useParams();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -24,7 +24,7 @@ function EditEntry() {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3000/entries/${id}`, {
+    fetch(`http://localhost:3001/entries/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, content, date, mood }),
@@ -64,4 +64,4 @@ function EditEntry() {
   );
 }
 
-export default EditEntry;
+export default EditJournal;
