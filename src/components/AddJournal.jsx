@@ -3,7 +3,7 @@ import { useState } from 'react';
 function AddJournal() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
+  const [date, setDate] = useState(new Date());
   const [mood, setMood] = useState('happy');
 
   const handleSubmit = (event) => {
@@ -19,7 +19,7 @@ function AddJournal() {
     // Clear the form after submission
     setTitle('');
     setContent('');
-    setDate(new Date().toISOString().split('T')[0]);
+    setDate(new Date());
     setMood('happy');
   };
 
