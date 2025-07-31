@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function JournalList() {
   const [entries, setEntries] = useState([]);
+  const navigate = useNavigate();
 
   // Load my journal entries when page opens
   useEffect(() => {
@@ -37,7 +39,7 @@ function JournalList() {
           <p>Date: {entry.date}</p>
           <p>Mood: {entry.mood}</p>
           <p>{entry.content}</p>
-          <button onClick={() => window.location = `/edit/${entry.id}`} className="btn">Edit</button>
+          <button onClick={() => navigate(`/edit/${entry.id}`)} className="btn">Edit</button>
           <button onClick={() => handleDelete(entry.id)} className="btn">Delete</button>
         </div>
       ))}
