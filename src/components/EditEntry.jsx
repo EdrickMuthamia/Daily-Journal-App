@@ -22,8 +22,8 @@ function EditJournal() {
   }, [id]);
 
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     fetch(`http://localhost:3001/entries/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },

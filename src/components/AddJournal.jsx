@@ -6,8 +6,8 @@ function AddJournal() {
   const [date, setDate] = useState(new Date());
   const [mood, setMood] = useState('happy');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
     
     // POST request - add new entry with all fields
     fetch('http://localhost:3001/entries', {
