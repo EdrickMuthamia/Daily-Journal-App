@@ -17,12 +17,12 @@ function EditJournal() {
         setTitle(data.title);
         setContent(data.content);
         setDate(data.date);
-        setMood(data.mood);
+        setMood(data.mood);    
       });
   }, [id]);
 
   
-  const handleSubmit = (event) => {
+  const handleSubmit = (event) => {   
     event.preventDefault();
     fetch(`http://localhost:3001/entries/${id}`, {
       method: "PUT",

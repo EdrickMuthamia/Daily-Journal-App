@@ -18,12 +18,7 @@ A React-based journal application where users can write, edit, and manage their 
 - **State Management**: Used React hooks (useState, useEffect)
 - **Forms**: Created controlled forms for data input
 - **API Integration**: Connected frontend to backend with fetch requests
-
-### Backend (Firebase)
-- **Database**: Firebase Firestore cloud database
-- **Real-time**: Cloud-based NoSQL database
-- **CRUD Operations**: Create, Read, Update, Delete with Firebase SDK
-
+o
 ### Components I Created
 1. `Navbar.jsx` - Navigation menu
 2. `Home.jsx` - Welcome page
@@ -32,24 +27,6 @@ A React-based journal application where users can write, edit, and manage their 
 5. `EditEntry.jsx` - Form to edit existing entries
 6. `NotFound.jsx` - 404 error page
 
-## How to Run
-
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Setup Firebase (see FIREBASE_SETUP.md for details):
-   - Create Firebase project
-   - Setup Firestore database
-   - Update firebase.js with your config
-
-3. Start the React app:
-   ```bash
-   npm run dev
-   ```
-
-4. Open browser: `http://localhost:5173`
 
 # license  
 MIT
